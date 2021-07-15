@@ -493,13 +493,13 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 				case '3': tmp += " x 100mm"; break;
 				case '4': tmp += " x 110mm"; break;
 				case '5': tmp += " x 120mm"; break;
-				case '6': 
+				case '6':
+					tmp += " 0mm Layback";
+					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579_4/black-inc-0-offset-seatpost.jpg";
+					break;
+				case '7': 
 					tmp += " 25mm Layback"; 
 					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579/black-inc-0-offset-seatpost.jpg";
-					break;
-				case '7':
-				tmp += " 0mm Layback";
-					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579_4/black-inc-0-offset-seatpost.jpg";
 					break;
 				default: badresult = true;
 			}
