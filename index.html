@@ -471,6 +471,7 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 
 			switch (number.charAt(0)) {
 				case '1': tmp = "Black Inc Integrated Barstem"; break;
+				case '3': tmp = "Black Inc Seat Post"; break;
 				default: badresult = true;
 			}
 			document.getElementById("rname").innerHTML = tmp;
@@ -480,6 +481,8 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 				case '1': tmp = "400mm"; break;
 				case '3': tmp = "420mm"; break;
 				case '4': tmp = "440mm"; break;
+				case '5': tmp = "27.2mm x 350mm, "; break;
+				case '6': tmp = "31.6mm x 350mm, "; break;
 				default: badresult = true;
 			}
 			console.log("1 " + tmp + " bad " + badresult);
@@ -490,12 +493,20 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 				case '3': tmp += " x 100mm"; break;
 				case '4': tmp += " x 110mm"; break;
 				case '5': tmp += " x 120mm"; break;
+				case '6': 
+					tmp += " 25mm Layback"; 
+					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579/black-inc-0-offset-seatpost.jpg";
+					break;
+				case '7':
+				tmp += " 0mm Layback";
+					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579_4/black-inc-0-offset-seatpost.jpg";
+					break;
 				default: badresult = true;
 			}
 			document.getElementById("rsize").innerHTML = tmp;
 			console.log("2 " + tmp + " bad " + badresult);
 
-			tmp = number.charAt(5) + number.charAt(3) + "\\" + number.charAt(4);
+			tmp = number.charAt(4) + "\\20" + number.charAt(5) + number.charAt(3);
 			document.getElementById("rdate").innerHTML = tmp;
 			console.log("345 " + tmp + " bad " + badresult);
 
